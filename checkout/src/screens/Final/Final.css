@@ -1,0 +1,42 @@
+@import '../../assets/variables.css';
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $min-width) {
+    margin-top: 90px;
+  }
+}
+
+.successIcon {
+  background: url(./assets/tick.svg);
+  width: 50px;
+  height: 50px;
+  margin-top: 60px;
+}
+
+.title {
+  @include typography-xl;
+
+  font-family: $font-family-medium;
+  margin-top: 55px;
+}
+
+.description {
+  @include typography-m;
+
+  margin-top: 15px;
+  color: #505050;
+}
+
+.callToAction {
+  margin-top: 60px;
+}
+
+.back {
+  margin-top: 30px;
+}

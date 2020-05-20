@@ -1,0 +1,35 @@
+@import '../../assets/variables.css';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $min-width) {
+    padding: 0 15px;
+  }
+}
+
+.title {
+  @include typography-xxxl;
+
+  margin-top: 130px;
+  text-align: center;
+}
+
+.picture {
+  width: 375px;
+  height: 265px;
+  background: url('./assets/500.png');
+  background-size: cover;
+  margin-top: 30px;
+}
+
+.back {
+  margin-top: 65px;
+  width: 335px;
+
+  @media (max-width: $min-width) {
+    width: 100%;
+  }
+}

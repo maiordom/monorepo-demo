@@ -1,0 +1,42 @@
+.container {
+  list-style: none;
+  padding: 0 0 0 10px;
+
+  li {
+    position: relative;
+  }
+
+  li + li {
+    margin-top: 12px;
+  }
+}
+
+:global .direction-ltr :local {
+  li:before {
+    width: 3px;
+    height: 3px;
+    content: '';
+    position: absolute;
+    background: url(./assets/point.svg);
+    left: -10px;
+    top: 50%;
+    margin-top: -3px;
+  }
+}
+
+:global .direction-rtl :local {
+  .container {
+    padding: 0 10px 0 0;
+  }
+
+  li:after {
+    width: 3px;
+    height: 3px;
+    content: '';
+    position: absolute;
+    background: url(./assets/point.svg);
+    right: -10px;
+    top: 50%;
+    margin-top: -3px;
+  }
+}

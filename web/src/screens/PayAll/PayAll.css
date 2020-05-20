@@ -1,0 +1,83 @@
+@import '../../assets/variables.css';
+
+.amountCard {
+  background: #f5f6f5;
+  border-radius: 17px;
+  height: 174px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.spinner {
+  margin: 100px auto 0;
+}
+
+.wrong {
+  @include typography-xl;
+
+  text-align: center;
+  padding-top: 100px;
+}
+
+.amountWrapper {
+  margin-top: 30px;
+}
+
+.amount {
+  font-size: 48px;
+  line-height: 62px;
+}
+
+.currency {
+  @include typography-xxl;
+}
+
+.pay {
+  width: 250px;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: $min-width) {
+    bottom: -18px;
+  }
+}
+
+.purchasesGroup {
+  margin: 55px 0;
+
+  @media (max-width: $min-width) {
+    margin: 30px 0;
+  }
+}
+
+.payLaterPurchases {
+  @media (max-width: $min-width) {
+    margin-top: 55px;
+  }
+}
+
+.purchasesList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px -8px;
+}
+
+.heading {
+  @include typography-xxl;
+
+  display: block;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.purchase {
+  width: calc(50% - 16px);
+  margin: 8px;
+
+  @media (max-width: $min-width) {
+    padding-top: 0;
+  }
+}

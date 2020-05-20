@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+<<<<<<< HEAD
+    <title>Oval Copy 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3" transform="translate(-312.000000, -221.000000)" fill="#FFFFFF" stroke="#292929">
+            <circle id="Oval-Copy-6" cx="324.5" cy="233.5" r="12"></circle>
+=======
+    <title>Oval Copy 9</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1" transform="translate(-894.000000, -967.000000)" stroke="#292929">
+            <g id="Group-23-Copy" transform="translate(548.000000, 874.000000)">
+                <g transform="translate(6.000000, 88.000000)" id="Group-26">
+                    <g transform="translate(303.000000, 0.000000)">
+                        <circle id="Oval-Copy-9" cx="49.5" cy="17.5" r="12"></circle>
+                    </g>
+                </g>
+            </g>
+>>>>>>> master
+        </g>
+    </g>
+</svg>

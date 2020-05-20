@@ -1,0 +1,157 @@
+@import '../../assets/variables.css';
+
+.container {
+  padding: 0 10px;
+  position: relative;
+
+  &:hover {
+    background: #f5f6f5;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &.toggled {
+    .border:after {
+      display: block;
+    }
+
+    &.hasInstallments {
+      .border:after {
+        display: none;
+      }
+    }
+  }
+
+  &.toggled,
+  &:hover {
+    background: #f5f6f5;
+
+    &:after {
+      background: #abffe9;
+    }
+
+    &.refunded:after {
+      background: rgba(#5a3eed, 0.5);
+    }
+
+    &.overdue:after {
+      background: #d3617e;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      left: 0;
+    }
+  }
+
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.header {
+  @include typography-xxl;
+
+  color: rgba(#454545, 0.6);
+}
+
+.hasInstallments:not(.toggled) {
+  padding-bottom: 15px;
+}
+
+.hasInstallments.toggled {
+  .info {
+    padding-bottom: 0;
+  }
+}
+
+.slider {
+  height: 140px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 5px;
+  margin: 10px 0 0 -10px;
+}
+
+.widget {
+  cursor: pointer;
+}
+
+.toggled .widget {
+  cursor: default;
+}
+
+.orderNumber {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+  right: 10px;
+  border-bottom: 1px solid #eaeaea;
+
+  @media (max-width: $min-width) {
+    margin-left: 50px;
+    left: 10px;
+  }
+}
+
+.info {
+  margin: 0 0 0 60px;
+  padding-bottom: 20px;
+
+  @media (max-width: $min-width) {
+    margin: 0;
+  }
+}
+
+.closeWrapper {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 10px;
+}
+
+.close {
+  margin-left: auto;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: url('./assets/close.svg');
+}
+
+.deliveryTitle {
+  @include typography-l;
+
+  margin-bottom: 12px;
+}
+
+:global .direction-rtl :local {
+  .border:after {
+    margin-right: 60px;
+    margin-left: 0;
+
+    @media (max-width: $min-width) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.installments {
+  justify-content: flex-start;
+  margin-left: 60px;
+
+  @media (max-width: $min-width) {
+    margin-left: 50px;
+  }
+}

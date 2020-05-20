@@ -1,0 +1,58 @@
+$main-color: #3eedbf;
+$coral-color: #d3617e;
+
+$font-size-xxxxl: 36px;
+$font-size-xxxl: 30px;
+$font-size-xxl: 24px;
+$font-size-xl: 18px;
+$font-size-l: 16px;
+$font-size-m: 14px;
+$font-size-s: 12px;
+$font-size-xs: 10px;
+
+$grid-width: 15px;
+$gap-width: 5px;
+
+$min-width: 500px;
+$middle-width: 900px;
+$max-width: 1200px;
+
+$belt-width: 335px;
+
+@mixin typography-xxxxl {
+  font-size: 36px;
+  line-height: 49px;
+}
+
+@mixin typography-xxxl {
+  font-size: 30px;
+  line-height: 41px;
+}
+
+@mixin typography-xxl {
+  font-size: 24px;
+  line-height: 33px;
+}
+
+@mixin typography-xl {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin typography-l {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin typography-m {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+@mixin typography-s {
+  font-size: 12px;
+  line-height: 17px;
+}
+
+$font-family-regular: 'noto_sans_display_regular';
+$font-family-medium: 'noto_sans_display_medium';

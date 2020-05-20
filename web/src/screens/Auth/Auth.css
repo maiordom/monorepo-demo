@@ -1,0 +1,90 @@
+@import '../../assets/variables.css';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome {
+  width: 50%;
+  background: url(../../assets/images/welcome.webp) no-repeat;
+  background: url(../../assets/images/welcome.png) no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  @media (max-width: $middle-width) {
+    display: none;
+  }
+}
+
+.logo {
+  width: 121px;
+  height: 40px;
+  background: url(../../assets/images/logo.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+
+  @media (max-width: $min-width) {
+    top: 50px;
+    width: 100px;
+    height: 34px;
+  }
+}
+
+.content {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  @media (max-width: $middle-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $min-width) {
+    margin: 0 15px;
+  }
+}
+
+.authForm {
+  margin: 0 auto;
+  height: 230px;
+  width: 375px;
+
+  @media (max-width: $min-width) {
+    width: 100%;
+  }
+}
+
+.description {
+  bottom: 50px;
+  position: absolute;
+  width: 375px;
+  color: rgba(#292929, 0.7);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: $min-width) {
+    width: 100%;
+  }
+}
+
+.codeForm {
+  height: 230px;
+}
+
+.title {
+  @include typography-xxxxl;
+
+  margin-bottom: 40px;
+}

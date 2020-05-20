@@ -1,0 +1,25 @@
+@import '../../assets/variables.css';
+
+.pay {
+  @include typography-l;
+
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  height: 48px;
+  background: #292929;
+  cursor: pointer;
+  color: #fff;
+  flex-shrink: 0;
+
+  &.disabled {
+    background: #d7d7d7;
+    cursor: default;
+  }
+
+  @media (max-width: $min-width) {
+    height: 36px;
+  }
+}

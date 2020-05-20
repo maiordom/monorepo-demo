@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tabby Checkout</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      #tabby-checkout {
+        width: 100%;
+        height: 100%;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .button {
+        height: 42px;
+        background: #3eedbf;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: background 0.1s;
+        cursor: pointer;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        width: 100%;
+      }
+
+      .button + .button {
+        margin-top: 40px;
+      }
+
+      .control {
+        background: white;
+        border: 1px solid #505050;
+        text-transform: initial;
+      }
+
+      .control {
+        margin-top: 100px;
+      }
+
+      .control + .control {
+        margin-top: 20px;
+      }
+
+      .button.primary:hover {
+        background: rgba(62, 237, 191, 0.8);
+      }
+
+      .button.primary:active {
+        background: #63debe;
+      }
+
+      .button.primary.button__disabled {
+        background: #bdbdbd;
+        color: #868686;
+        cursor: default;
+      }
+
+      .product-select {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+      }
+
+      .checkbox {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .checkbox + .checkbox {
+        margin-left: 30px;
+      }
+
+      .checked .checkbox-control::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: gray;
+      }
+
+      .checkbox .checkbox-control {
+        width: 18px;
+        height: 18px;
+        box-sizing: border-box;
+        border: 1px solid gray;
+        display: block;
+        border-radius: 50%;
+        margin-right: 7px;
+        position: relative;
+        top: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <button disabled class="button primary button__disabled">
+        Pay with tabby
+      </button>
+      <div class="product-select">
+        <div class="pay-later checkbox checked">
+          <div class="checkbox-control"></div>
+          Pay later
+        </div>
+        <div class="installments checkbox">
+          <div class="checkbox-control"></div>
+          Installments
+        </div>
+      </div>
+
+      <% if (htmlWebpackPlugin.options.__ENV__ === 'development') { %>
+      <div class="controls">
+        <button class="button control">
+          Checkout
+        </button>
+        <button class="button control">
+          WelcomeBack
+        </button>
+        <button class="button control">
+          InstallmentPlan
+        </button>
+        <button class="button control">
+          ConfirmationCode
+        </button>
+        <button class="button control">
+          Upload
+        </button>
+        <button class="button control">
+          AuthorizationCode
+        </button>
+        <button class="button control">
+          FinalPayLater
+        </button>
+        <button class="button control">
+          FinalInstallments
+        </button>
+        <button class="button control">
+          Rejected
+        </button>
+        <button class="button control">
+          ScanConfirm
+        </button>
+        <button class="button control">
+          ScanError
+        </button>
+        <button class="button control">
+          InternalServerError
+        </button>
+        <button class="button control">
+          Downpayment
+        </button>
+      </div>
+      <% } %>
+    </div>
+    <script
+      type="text/javascript"
+      src="integration.js?<%= htmlWebpackPlugin.options.__TAG__ %>"
+    ></script>
+    <script>
+      (() => {
+        <% if (htmlWebpackPlugin.options.__ENV__ === 'development') { %>
+          let route = null;
+          document.querySelector('.controls').addEventListener('click', (event) => {
+            if (event.target.classList.contains('button')) {
+              route = event.target.innerHTML.trim();
+
+              document.querySelector('#tabby-checkout').style.display = '';
+
+              route = route[0].toLowerCase() + route.slice(1);
+
+              if (relaunchTabby) {
+                Tabby.create();
+              } else {
+                Tabby.launch({ route, product });
+              }
+            }
+          }, false);
+        <% } %>
+        var payment = {
+          id: null,
+          created_at: null,
+          expires_at: null,
+          test: false,
+          status: 'CREATED',
+          amount: '100.00',
+          currency: 'AED',
+          description: '1 cancelled purchase',
+          buyer: {
+            name: 'Customer Rec Act Loan',
+            email: 'successful.payment@tabby.ai',
+            phone: '0500000001',
+            dob: null,
+          },
+          shipping_address: {
+            city: 'city',
+            raw: 'raw',
+            zip: 'zip',
+          },
+          order_history: [
+            {
+              amount: '125.0000',
+              buyer: {
+                name: 'Customer Rec Act Loan',
+                phone: '+971580000000',
+              },
+              items: [
+                {
+                  ordered: 1,
+                  captured: 1,
+                  refunded: 0,
+                  shipped: 1,
+                  title: 'Сropped straight leg jean in washed black',
+                  unit_price: '120.0000',
+                },
+              ],
+              payment_method: 'tabby_checkout',
+              purchased_at: '2019-11-26T11:09:40+00:00',
+              shipping_address: {
+                address: 'ccc',
+                city: 'moscow',
+              },
+              status: 'complete',
+            },
+            {
+              amount: '250.0000',
+              buyer: {
+                name: 'Customer Rec Act Loan',
+                phone: '+971580000000',
+              },
+              items: [
+                {
+                  ordered: 2,
+                  captured: 0,
+                  refunded: 0,
+                  shipped: 0,
+                  title: 'Сropped straight leg jean in washed black',
+                  unit_price: '120.0000',
+                },
+              ],
+              payment_method: 'tabby_checkout',
+              purchased_at: '2019-11-26T13:50:25+00:00',
+              shipping_address: {
+                address: 'v',
+                city: 'moscow',
+              },
+              status: 'complete',
+            },
+          ],
+          order: {
+            reference_id: '94e7345c-1a10-4a3b-90e2-ea89c661d520',
+            updated_at: '0001-01-01T00:00:00Z',
+            tax_amount: '0.00',
+            shipping_amount: '20.00',
+            discount_amount: '9.00',
+            items: [
+              {
+                reference_id: 'SKU_id',
+                title: 'Title',
+                description: 'desc',
+                quantity: 10,
+                unit_price: '100.00',
+                image_url: 'image_url',
+                product_url: 'product_url',
+              },
+            ],
+          },
+        };
+        var relaunchTabby = false;
+        var product = 'pay_later';
+        var button = document.querySelector('.button');
+        var config = {
+          nodeId: 'tabby-checkout',
+          direction: 'ltr',
+          payment,
+          apiKey: 'pk_0009884f-b3d4-407d-b2bd-eebda4aebb5f',
+          onChange: data => {
+            if (data.status === 'created') {
+              button.classList.remove('button__disabled');
+              button.removeAttribute('disabled');
+
+              if (relaunchTabby) {
+                Tabby.launch({ route, product });
+              }
+            }
+
+            console.log('INTEGRATION:', data.status, data);
+          },
+          onClose: () => {
+            route = null;
+            relaunchTabby = true;
+            document.querySelector('#tabby-checkout').style.display = 'none';
+          },
+        };
+
+        var payLater = document.querySelector('.pay-later');
+        var installments = document.querySelector('.installments');
+
+
+        payLater.onclick = () => {
+          installments.classList.remove('checked');
+          payLater.classList.add('checked');
+          product = 'pay_later';
+        };
+
+        installments.onclick = () => {
+          installments.classList.add('checked');
+          payLater.classList.remove('checked');
+          product = 'installments';
+        };
+
+        button.onclick = () => {
+          document.querySelector('#tabby-checkout').style.display = '';
+
+          if (relaunchTabby) {
+            Tabby.create();
+          } else {
+            Tabby.launch({ product });
+          }
+        };
+
+        Tabby.init(config);
+        Tabby.create();
+      })();
+    </script>
+  </body>
+</html>

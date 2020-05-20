@@ -1,0 +1,20 @@
+@import '../../assets/variables.css';
+
+.terms {
+  color: #4f4f4f;
+  font-size: $font-size-l;
+  position: relative;
+  top: 2px;
+}
+
+:global .direction-ltr :local {
+  .terms {
+    margin-left: 10px;
+  }
+}
+
+:global .direction-rtl :local {
+  .terms {
+    margin-right: 10px;
+  }
+}

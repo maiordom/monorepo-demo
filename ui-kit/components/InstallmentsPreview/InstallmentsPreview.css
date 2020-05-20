@@ -1,0 +1,55 @@
+@import '../../assets/variables.css';
+
+.item {
+  max-width: 150px;
+  flex-grow: 1;
+  height: 15px;
+  margin: 2px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+
+  &:first-child {
+    margin-left: 0;
+    border-radius: 17px 0 0 17px;
+  }
+
+  &:last-child {
+    border-radius: 0 17px 17px 0;
+  }
+}
+
+.isPaid {
+  background-color: $main-color;
+}
+
+.toPay {
+  border: 2px solid $main-color;
+}
+
+.isOverdue {
+  border: 2px solid $coral-color;
+}
+
+.default {
+  border: 2px solid rgba(#292929, 0.3);
+}
+
+.installments {
+  display: flex;
+  margin: -2px;
+}
+
+@media (max-width: $min-width) {
+  .installments {
+    margin: -1px;
+  }
+  .item {
+    margin: 1px;
+  }
+
+  .isOverdue,
+  .default,
+  .toPay {
+    border-width: 1px;
+  }
+}

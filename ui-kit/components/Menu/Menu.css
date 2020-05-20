@@ -1,0 +1,45 @@
+@import '../../assets/variables.css';
+
+.container {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding-left: 30px;
+  height: 60px;
+  color: #c7c7c7;
+  margin-top: 30px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+
+  @include typography-l;
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.title {
+  margin-left: 15px;
+  position: relative;
+  top: 1px;
+}
+
+.itemActive {
+  color: #abffe9;
+}
+
+:global .direction-rtl :local {
+  .title {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .item {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+}

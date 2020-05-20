@@ -1,0 +1,39 @@
+@import '../../assets/variables.css';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &.gray {
+    background: #f8f8f8;
+
+    .spacer {
+      background: #f8f8f8;
+    }
+  }
+
+  .spacer {
+    flex-shrink: 0;
+
+    @media (max-width: $min-width) {
+      height: 50px;
+    }
+  }
+}
+
+.belt {
+  margin: 0 20px;
+
+  @media (min-width: $min-width) {
+    width: $belt-width;
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  width: 81px;
+  height: 27px;
+  background: url('../../assets/images/logo.png');
+  background-size: cover;
+}

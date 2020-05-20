@@ -1,0 +1,129 @@
+{
+  "auth": {
+    "codeForm": {
+      "attemptPluralForm": ["attempt", "attempts"],
+      "attempts": "You have {{attempts}} {{attemptPluralForm}} left",
+      "sendAnotherCode": "Send another code",
+      "somethingWrong": "Something wrong",
+      "title": "Enter your code",
+      "wrongCode": "Incorrect code"
+    },
+    "description": "If you already have a Tabby account, please log in here. An account will be created after you make your first purchase with Tabby",
+    "form": {
+      "errors": {
+        "incorrectPhone": "Your phone number is incorrect",
+        "invalidPhone": "Please enter a valid UAE cell phone number",
+        "somethingWrong": "Something wrong"
+      },
+      "loginPlaceholder": "Phone number",
+      "submit": "Send code"
+    },
+    "timer": {
+      "units": "sec."
+    },
+    "title": "Log in"
+  },
+  "controls": {
+    "pay": "Pay"
+  },
+  "credit": {
+    "blocked": "Your account is currently locked 🔒",
+    "canSpend": "Here's what you can spend with Tabby💰",
+    "nothingToPay": "Relax, you have nothing to pay now 🛋",
+    "overdue": "You have an overdue payment of {{overdue}} {{currency}}, please pay immediately ⏰",
+    "pay": "Pay",
+    "payForAllOrders": "Pay for all my orders in one go 💸",
+    "unlockAfterFirstPurchase": "Unlock more shopping after your first payment💰",
+    "walletBalance": "You have {{walletBalance}} {{currency}} in your wallet"
+  },
+  "creditStatus": {
+    "canSpend": "Here's what you can  spend 💰",
+    "overdue": "You have overdue orders ⏰",
+    "pay": "Pay",
+    "spentSoFar": "Spent so far 💸",
+    "unlockAfterFirstPurchase": "Unlock more shopping after your first payment💰"
+  },
+  "dates": {
+    "today": "Today",
+    "tomorrow": "Tomorrow"
+  },
+  "main": {
+    "header": "Home",
+    "notDueYet": "Not due yet",
+    "paid": "Paid",
+    "toPay": "To pay"
+  },
+  "payAll": {
+    "header": "Pay all",
+    "payAfterDelivery": "Pay after delivery",
+    "payInInstallments": "Pay in installments"
+  },
+  "payPurchase": {
+    "header": "Payment details"
+  },
+  "paymentCancel": {
+    "callToAction": "Try again",
+    "description": "Something went wrong",
+    "title": "Your payment {{amount}} {{currency}} has not been accepted"
+  },
+
+  "paymentOrder": {
+    "description": "🏖 Relax. You don’t have to pay anything until the order is delivered",
+    "orderNumber": "Order number",
+    "title": "Payment details"
+  },
+  "paymentState": {
+    "biWeeklyInstallmentFee": "Bi-weekly installment fee",
+    "installmentFee": "Installment fee",
+    "installmentPlan": {
+      "overdue": "Overdue",
+      "paid": "Paid",
+      "toPay": "To pay"
+    },
+    "installmentsMethod": "Pay in installments",
+    "monthlyInstallmentFee": "Monthly installment fee",
+    "orderInfo": "Order info",
+    "orderNumber": "Order number",
+    "paid": "Paid",
+    "pay": "Pay",
+    "payInFull": "Pay in full",
+    "payLaterFee": "Pay after delivery fee",
+    "payLaterMethod": "Pay after delivery",
+    "paymentMethod": "Payment method",
+    "paymentOverdue": "Payment Overdue",
+    "shippingAddress": "Delivery Address",
+    "shippingFee": "Shipping fee"
+  },
+  "paymentSuccessful": {
+    "callToAction": "ok",
+    "description": "Thank you for using Tabby",
+    "title": "Your payment of {{amount}} {{currency}} has been accepted"
+  },
+  "profile": {
+    "callToAction": "Pay for your purchases to unlock more shopping with Tabby.",
+    "header": "Profile",
+    "logout": "Log out",
+    "pay": "Pay",
+    "personalInformation": {
+      "items": {
+        "email": "E-mail",
+        "emiratesID": "Emirates ID",
+        "name": "Name",
+        "phoneNumber": "Phone number"
+      },
+      "title": "Personal information"
+    },
+    "title": "Hello {{name}}"
+  },
+  "somethingWentWrong": {
+    "back": "Back",
+    "title": [
+      "Uh oh!",
+      "Something went completely wrong.",
+      "But we're on it. Try again!"
+    ]
+  },
+  "statuses": {
+    "wrong": "Something went wrong!"
+  }
+}

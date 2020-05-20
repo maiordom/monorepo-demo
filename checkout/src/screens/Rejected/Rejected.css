@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.picture {
+  margin-top: 45px;
+  width: 212px;
+  height: 141px;
+  background: url('../../assets/images/depressed-cat.png');
+  background-size: cover;
+}
+
+.title {
+  width: 280px;
+  margin-top: 20px;
+  color: #505050;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+.changePaymentMethod {
+  margin-top: 30px;
+}

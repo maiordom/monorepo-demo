@@ -1,0 +1,48 @@
+.container {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.control {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.input {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  opacity: 0;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+
+  &.default {
+    background: url('./assets/checkbox.svg');
+  }
+
+  &.checked {
+    background: url('./assets/checkbox-checked.svg');
+  }
+}
+
+.value {
+  position: relative;
+  top: 2px;
+}
+
+:global .direction-ltr :local {
+  .value {
+    margin-left: 10px;
+  }
+}
+
+:global .direction-rtl :local {
+  .value {
+    margin-right: 10px;
+  }
+}

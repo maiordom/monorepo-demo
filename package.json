@@ -1,0 +1,48 @@
+{
+  "name": "zeus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:tabby.ai/apps/zeus.git",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "npx eslint --fix --ext .ts,.tsx,.js checkout/ ui-kit/ core/ web/",
+    "tsc": "npx tsc --noEmit -p checkout/ -p ui-kit/ -p core/ -p web/"
+  },
+  "workspaces": {
+    "packages": [
+      "checkout",
+      "core",
+      "ui-kit",
+      "web"
+    ],
+    "nohoist": [
+      "**"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,tsx,ts}": "npx eslint",
+    "*.{js,tsx,ts,css}": "npx prettier --write"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-plugin": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-native": "^3.8.1",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.2",
+    "prettier": "1.19.1",
+    "react": "16.12.0",
+    "typescript": "3.7.2"
+  },
+  "dependencies": {}
+}

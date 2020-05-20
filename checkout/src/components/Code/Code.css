@@ -1,0 +1,36 @@
+@import '../../assets/variables.css';
+
+.timer {
+  margin-top: 10px;
+  font-size: $font-size-s;
+  line-height: 16px;
+  color: #828282;
+}
+
+.timer + .attempts {
+  margin-top: 5px;
+}
+
+.attempts {
+  margin-top: 10px;
+  font-size: $font-size-s;
+  line-height: 16px;
+  color: #828282;
+}
+
+.sendAnotherCode {
+  margin-top: 40px;
+  font-size: $font-size-l;
+  line-height: 23px;
+  color: #c0c0c0;
+
+  &.active {
+    color: #3eedbf;
+    cursor: pointer;
+  }
+}
+
+.spinner {
+  margin: 40px auto 20px;
+  text-align: justify;
+}

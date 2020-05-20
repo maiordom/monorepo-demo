@@ -1,0 +1,15 @@
+@import '../../assets/variables.css';
+
+.container {
+  position: relative;
+  height: 120px;
+  margin-top: 30px;
+
+  @media (max-width: $min-width) {
+    height: 80px;
+
+    .arrow {
+      display: none;
+    }
+  }
+}

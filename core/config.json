@@ -1,0 +1,35 @@
+{
+  "apps": {
+    "desktop": {
+      "development": "https://tabby.dev",
+      "testing": "https://tabby.dev",
+      "production": "https://tabby.ai"
+    }
+  },
+  "api": {
+    "env": {
+      "development": "https://tabby.local:8011",
+      "testing": "https://api.tabby.dev/api",
+      "production": "https://api.tabby.ai/api"
+    }
+  },
+  "checkoutIframe": {
+    "env": {
+      "development": "https://tabby.local:8080",
+      "testing": "https://checkout.tabby.dev",
+      "production": "https://checkout.tabby.ai"
+    }
+  },
+  "amplitudeAPIKey": {
+    "checkout": {
+      "development": "8e87cda6ecf600fa08a0010bbd696da9",
+      "testing": "8e87cda6ecf600fa08a0010bbd696da9",
+      "production": "ff949064827f33762dcae4735ce508aa"
+    },
+    "web": {
+      "development": "8e87cda6ecf600fa08a0010bbd696da9",
+      "testing": "8e87cda6ecf600fa08a0010bbd696da9",
+      "production": "ff949064827f33762dcae4735ce508aa"
+    }
+  }
+}

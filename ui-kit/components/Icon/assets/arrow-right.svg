@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group 15 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="15" cy="15" r="15"></circle>
+        <filter x="-36.7%" y="-33.3%" width="173.3%" height="173.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.2.-main-page.-several-orders---still-to-pay.-available-limit." transform="translate(-1232.000000, -491.000000)">
+            <g id="Group-15-Copy" transform="translate(1254.000000, 512.000000) scale(-1, 1) translate(-1254.000000, -512.000000) translate(1239.000000, 497.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-7-Copy-3" transform="translate(15.500000, 15.000000) scale(-1, 1) translate(-15.500000, -15.000000) translate(10.000000, 6.000000)" fill="#000000" fill-rule="nonzero">
+                    <g id="noun_Arrow_2284442-Copy-4" transform="translate(5.500000, 9.000000) scale(-1, 1) rotate(-90.000000) translate(-5.500000, -9.000000) translate(-3.000000, 4.000000)">
+                        <g id="Group" transform="translate(0.500000, 0.500000)">
+                            <path d="M7.96666587,0.100903636 C7.7025919,0.107218846 7.45019959,0.213509055 7.25834587,0.399199091 L0.591679467,6.94467273 C0.168088269,7.36399991 0.156071567,8.05478813 0.564810387,8.48925984 C0.973549208,8.92373155 1.64894757,8.93808938 2.07498613,8.52136364 L7.9999992,2.70034364 L13.9250139,8.52136364 C14.3510524,8.93808938 15.0264508,8.92373155 15.4351896,8.48925984 C15.8439284,8.05478813 15.8319117,7.36399991 15.4083205,6.94467273 L8.74165253,0.399199091 C8.53313387,0.197101429 8.25372915,0.0895574398 7.96666587,0.100903636 Z" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

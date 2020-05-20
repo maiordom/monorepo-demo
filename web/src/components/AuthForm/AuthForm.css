@@ -1,0 +1,20 @@
+.submit {
+  margin-top: 30px;
+  height: 48px;
+  border-radius: 10px;
+}
+
+.error {
+  margin-top: 30px;
+  text-align: center;
+  color: #ff4a4a;
+}
+
+.login {
+  height: 56px;
+  border-radius: 10px;
+
+  input::-moz-placeholder {
+    line-height: 54px;
+  }
+}

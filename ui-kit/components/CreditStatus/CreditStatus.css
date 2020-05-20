@@ -1,0 +1,94 @@
+@import '../../assets/variables.css';
+
+@mixin widget {
+  display: flex;
+  padding: 26px 30px 10px 30px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media {
+    padding: 16px 20px 10px 20px;
+  }
+}
+
+.container {
+  height: 130px;
+  border-radius: 27px;
+  display: flex;
+  overflow: hidden;
+
+  &.showMaximalLimit {
+    @include widget;
+
+    background: #abffe9;
+  }
+
+  &.canSpend {
+    @include widget;
+
+    background: #abffe9;
+  }
+
+  &.blocked {
+    @include widget;
+
+    background: #c798ff;
+
+    .amountWrapper {
+      color: rgba(#000, 0.4);
+    }
+  }
+
+  &.overdue {
+    @include widget;
+
+    background: #c798ff;
+
+    .amountWrapper {
+      color: rgba(#000, 0.4);
+    }
+  }
+
+  &.default {
+    .canSpend {
+      @include widget;
+
+      padding-left: 15px;
+      width: 63%;
+      background: #abffe9;
+    }
+
+    .spent {
+      @include widget;
+
+      padding-left: 30px;
+      width: 37%;
+      background: #c798ff;
+    }
+  }
+}
+
+.amountWrapper {
+  margin-bottom: 10px;
+
+  @media (max-width: $min-width) {
+    margin-bottom: 5px;
+  }
+}
+
+.title {
+  @include typography-l;
+}
+
+.amount {
+  @include typography-xxl;
+
+  @media (max-width: $min-width) {
+    @include typography-xl;
+  }
+}
+
+.currency {
+  @include typography-m;
+}

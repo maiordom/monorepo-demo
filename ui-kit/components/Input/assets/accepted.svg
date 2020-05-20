@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Ok</title>
+    <desc>Created with Sketch.</desc>
+    <g id="No-simbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Elements" transform="translate(-336.000000, -411.000000)">
+            <g id="Text-field_successful-validation" transform="translate(35.000000, 397.000000)">
+                <g id="Ok" transform="translate(301.000000, 14.000000)">
+                    <circle id="Oval" fill="#3EEDBF" cx="9.5" cy="9.5" r="9.5"></circle>
+                    <path d="M7.95687938,14 C7.76111069,14 7.57757755,13.9276784 7.44298658,13.7950889 L4.23727429,10.540618 C3.93138571,10.2633853 3.91915017,9.79329507 4.21280321,9.49195518 C4.4942207,9.19061528 4.97140688,9.17856169 5.27729545,9.46784799 L7.62651972,11.1191906 C7.76111069,11.2397266 7.96911493,11.2156194 8.07923481,11.0709762 L13.6464069,4.2968554 C13.8911178,3.97140831 14.368304,3.89908674 14.6986636,4.15221225 C15.0290233,4.39328416 15.1024365,4.8633744 14.8454901,5.18882148 L8.55642099,13.6986601 C8.42183002,13.8674104 8.22606133,13.9758928 8.0180571,13.9879464 C7.99358601,14 7.98135047,14 7.95687938,14 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

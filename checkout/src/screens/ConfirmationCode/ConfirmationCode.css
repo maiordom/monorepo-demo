@@ -1,0 +1,25 @@
+@import '../../assets/variables.css';
+
+.container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.progress {
+  margin: 0 20px 40px;
+}
+
+.title {
+  @include typography-xl;
+}
+
+.description {
+  @include typography-m;
+
+  margin-top: 10px;
+  color: #292929;
+}
+
+.codeForm {
+  margin-top: 35px;
+}

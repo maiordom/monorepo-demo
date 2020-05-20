@@ -1,0 +1,93 @@
+@import '../../assets/variables.css';
+
+.container {
+  border-radius: 17px;
+  background: #f5f6f5;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  padding: 15px 10px;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+
+  @media (max-width: $min-width) {
+    margin-top: 20px;
+    width: 35px;
+    height: 35px;
+  }
+
+  &.empty {
+    background: url(../../assets/images/empty.png) no-repeat center;
+    background-size: cover;
+  }
+}
+
+.status {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+.installmentsContainer {
+  margin-top: auto;
+}
+
+.title {
+  @include typography-xl;
+
+  margin-top: 7px;
+
+  @media (max-width: $min-width) {
+    @include typography-l;
+
+    margin-top: 14px;
+  }
+}
+
+.date {
+  @include typography-m;
+
+  color: #6d6d6d;
+
+  @media (max-width: $min-width) {
+    @include typography-s;
+  }
+}
+
+.overDueText {
+  color: $coral-color;
+}
+
+.amount {
+  @include typography-xl;
+
+  margin-top: auto;
+
+  @media (max-width: $min-width) {
+    @include typography-l;
+  }
+}
+
+.hasInstallments {
+  min-height: 300px;
+  padding-top: 60px;
+
+  @media (max-width: $min-width) {
+    min-height: 200px;
+    padding-top: 0;
+  }
+}
+
+:global .direction-rtl :local {
+  .status {
+    left: 6px;
+    right: auto;
+  }
+}

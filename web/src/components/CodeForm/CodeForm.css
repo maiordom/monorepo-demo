@@ -1,0 +1,39 @@
+@import '../../assets/variables.css';
+
+.timer {
+  margin-top: 10px;
+  font-size: $font-size-s;
+  line-height: 16px;
+  color: rgba(#fff, 0.7);
+}
+
+.timer + .attempts {
+  margin-top: 2px;
+}
+
+.attempts {
+  margin-top: 10px;
+  font-size: $font-size-s;
+  line-height: 16px;
+  color: #828282;
+}
+
+.sendAnotherCode {
+  margin-top: 40px;
+  font-size: $font-size-l;
+  line-height: 23px;
+  color: #c0c0c0;
+
+  &.active {
+    color: #3eedbf;
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.spinner {
+  margin-top: 40px;
+}

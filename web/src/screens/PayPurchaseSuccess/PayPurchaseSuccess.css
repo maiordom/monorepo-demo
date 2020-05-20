@@ -1,0 +1,81 @@
+@import '../../assets/variables.css';
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  height: 716px;
+  max-width: 600px;
+  position: relative;
+  background: url('./assets/zebra.svg');
+
+  @media (max-width: $min-width) {
+    width: auto;
+    height: auto;
+    background: none;
+    position: static;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 335px;
+  margin: 0 auto;
+}
+
+.title {
+  @include typography-xxl;
+
+  margin-top: 55px;
+
+  @media (max-width: $min-width) {
+    @include typography-xl;
+  }
+}
+
+.description {
+  @include typography-xl;
+
+  margin-top: 30px;
+  color: #505050;
+
+  @media (max-width: $min-width) {
+    @include typography-m;
+
+    margin-top: 10px;
+  }
+}
+
+.callToAction {
+  margin-top: 20px;
+
+  @media (max-width: $min-width) {
+    margin-top: 30px;
+  }
+}
+
+.footer {
+  &.default {
+    margin-top: 200px;
+  }
+
+  &.fixed {
+    position: absolute;
+    bottom: 40px;
+  }
+}
+
+.statusSuccess {
+  width: 70px;
+  height: 70px;
+  background: url('./assets/successful-l.svg');
+  margin-top: 70px;
+
+  @media (max-width: $min-width) {
+    width: 50px;
+    height: 50px;
+    background: url('./assets/successful-m.svg');
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <title>Tabby</title>
+  </head>
+
+  <body class="direction-ltr">
+    <div id="tabby-web"></div>
+    <% if (htmlWebpackPlugin.options.__ENV__ === 'production') { %>
+    <script
+      src="https://browser.sentry-cdn.com/5.14.1/bundle.min.js"
+      integrity="sha384-uNLty2kYRXkczv6MLytto1fP/VzNBKjYpUNIpNa3yvW0CYZrzJE4TyvUBDHtbMmq"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Sentry.init({
+        dsn: 'https://94dfc4ce903a4b5393d6adbb0f3655bb@sentry.io/5021754',
+      });
+    </script>
+    <% } %>
+  </body>
+</html>

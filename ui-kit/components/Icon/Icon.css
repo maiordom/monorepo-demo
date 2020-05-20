@@ -1,0 +1,26 @@
+.container {
+  overflow: hidden;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  g {
+    stroke: #000;
+  }
+}
+
+.warning {
+  g {
+    fill: #000;
+  }
+}

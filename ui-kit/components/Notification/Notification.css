@@ -1,0 +1,48 @@
+@import '../../assets/variables.css';
+
+.container {
+  @include typography-l;
+
+  display: flex;
+  align-items: center;
+  background: rgba(#ff5151, 0.8);
+  border-radius: 7px;
+  color: #fff;
+  min-height: 35px;
+  justify-content: center;
+  min-width: 335px;
+}
+
+.close {
+  cursor: pointer;
+
+  g {
+    stroke: #fff;
+  }
+}
+
+.text {
+  position: relative;
+  top: 2px;
+  margin-right: auto;
+}
+
+.warning {
+  margin-left: auto;
+
+  g {
+    fill: #fff;
+  }
+}
+
+:global .direction-rtl :local {
+  .text {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .warning {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

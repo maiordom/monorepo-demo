@@ -1,0 +1,91 @@
+@import '../../assets/variables.css';
+
+.container {
+  position: relative;
+}
+
+.white {
+  .field {
+    caret-color: #fff;
+    color: #fff;
+  }
+
+  .title {
+    color: rgba(#fff, 0.7);
+  }
+}
+
+.title {
+  @include typography-s;
+
+  color: #676767;
+}
+
+.fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.field::-webkit-outer-spin-button,
+.field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field {
+  width: 50px;
+  height: 38px;
+  border: 0;
+  border-bottom: 2px solid #efefef;
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  outline: 0;
+  font-size: $font-size-xl;
+  line-height: 25px;
+  text-align: center;
+  -webkit-appearance: none;
+  border-radius: 0;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  &.active {
+    border-bottom: 2px solid #3eedbf;
+  }
+
+  &.error {
+    border-bottom: 2px solid #f44336;
+  }
+}
+
+.errorMessage {
+  font-size: $font-size-xs;
+  line-height: 14px;
+  color: #f44336;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -27px;
+}
+
+:global .direction-ltr :local {
+  .field + .field {
+    margin-left: 12px;
+  }
+}
+
+:global .direction-rtl :local {
+  .field {
+    margin-right: 12px;
+  }
+}

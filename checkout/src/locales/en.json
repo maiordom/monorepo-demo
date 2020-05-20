@@ -1,0 +1,232 @@
+{
+  "authorizationCode": {
+    "description": "Your purchase is for {{amountToPay}} {{currency}} including the {{serviceFee}} {{currency}} fee. To confirm your purchase please enter the code we just sent you to <br />{{phone}}",
+    "title": "We just texted you"
+  },
+  "confirmationCode": {
+    "description": "To confirm your phone number please enter the code we just sent you to {{phone}}",
+    "title": "Confirm your phone number"
+  },
+  "checkout": {
+    "features": [
+      { "type": "text", "value": "Register using your ID" },
+      { "type": "text", "value": "Get your order and try it out" },
+      { "type": "text", "value": "Pay later with your card in up to 14 days" },
+      { "type": "link", "value": "More info", "name": "moreInfo" }
+    ],
+    "fields": {
+      "email": {
+        "placeholder": "Enter e-mail",
+        "status": {
+          "invalid_value": "E-mail is incorrect",
+          "required": "E-mail is required"
+        },
+        "title": "E-mail"
+      },
+      "phone": {
+        "placeholder": "Enter phone number",
+        "status": {
+          "invalid_value": "Please enter a valid UAE cell phone number",
+          "required": "Phone number is required"
+        },
+        "title": "Phone number"
+      }
+    },
+    "installments": {
+      "features": [
+        {
+          "type": "text",
+          "value": "Buy now and pay later in {{terms}} {{period}}"
+        },
+        {
+          "type": "text",
+          "value": "Starting from {{amount}} {{currency}} per month"
+        },
+        { "type": "link", "value": "More info", "name": "moreInfo" }
+      ]
+    },
+    "payLater": {
+      "features": [
+        { "type": "text", "value": "No credit card required" },
+        { "type": "text", "value": "Register using your ID and Buy Now" },
+        { "type": "text", "value": "Receive your order" },
+        { "type": "text", "value": "Pay us up to 14 days later" },
+        { "type": "link", "value": "More info", "name": "moreInfo" }
+      ]
+    },
+    "submit": "Sign up with Tabby"
+  },
+  "checkoutSessionStatuses": {
+    "error": "Payment method is not available",
+    "created": "created",
+    "approved": "approved",
+    "rejected": "rejected",
+    "authorized": "authorized"
+  },
+  "codeForm": {
+    "attemptPluralForm": ["attempt", "attempts"],
+    "attempts": "You have {{attempts}} {{attemptPluralForm}} left",
+    "sendAnotherCode": "Send another code",
+    "somethingWrong": "Something wrong",
+    "title": "Enter your code",
+    "wrongCode": "Incorrect code"
+  },
+  "common": {
+    "numerals": [
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine"
+    ],
+    "or": "or",
+    "plurals": {
+      "month": ["month", "months"],
+      "week": ["week", "weeks"]
+    }
+  },
+  "downpayment": {
+    "title": "Make a first payment {{amount}} {{currency}} now"
+  },
+  "dropzoneUpload": {
+    "description": "Please upload a photo of the back side of your Emirates ID to help us identify you",
+    "dropzone": {
+      "callToAction": "browse",
+      "description": "(The file size should not exceed 20Mb)",
+      "title": ["Drag and drop an image", "or {{browse}} to choose a file"]
+    },
+    "title": "Take a photo of the back of your Emirates ID"
+  },
+  "final": {
+    "installments": {
+      "back": "Back to store",
+      "callToAction": "Log in to manage your orders",
+      "description": "Your order is confirmed. Your first payment is due only after your order is delivered – not earlier than {{nextPaymentDate}}",
+      "title": "Thanks for using Tabby!"
+    },
+    "payLater": {
+      "back": "Back to store",
+      "callToAction": "Log in to manage your orders",
+      "description": "Your order is confirmed. Pay only after you get your goods delivered.",
+      "title": "Thanks for buying with Tabby!"
+    }
+  },
+  "internalServerError": {
+    "title": [
+      "Uh oh!",
+      "Something went completely wrong.",
+      "But we're on it. Try again!"
+    ],
+    "callToAction": "Back"
+  },
+  "galleryUpload": {
+    "card": {
+      "title": "Emirates ID back side"
+    },
+    "description": "Please upload a photo of the back side of your Emirates ID to help us identify you",
+    "errors": {
+      "sizeLimit": "File size limit 20Mb",
+      "somethingWrog": "Something went wrong"
+    },
+    "takePhoto": "Take a photo",
+    "title": "Take a photo of the back of you Emirates ID to help us identify you"
+  },
+  "header": {
+    "payLater": {
+      "description": "Total: {{amountToPay}} {{currency}} incl. {{serviceFee}} {{currency}} fee",
+      "title": "Pay up to 14 days after delivery"
+    },
+    "installments": {
+      "description": "{{amount}} {{currency}} fee per month, no hidden fees or interest",
+      "title": "Pay in installments in {{terms}} {{period}}"
+    }
+  },
+  "instalmentPlan": {
+    "desctiption": "{{amount}} {{currency}} installments fee per month",
+    "downpayment": "Pay {{amount}} {{currency}} now and the rest later",
+    "each": "Each {{period}}",
+    "every": "Every {{regulatiry}} {{period}}",
+    "title": "How many installments would you like?"
+  },
+  "paymentRejected": {
+    "changePaymentMethod": "Change the payment method",
+    "reason": {
+      "notAvailable": {
+        "title": "Unfortunately, your purchase cannot be accepted by Tabby"
+      },
+      "notEnoughLimit": {
+        "title": "We're sorry, but you can only spend up to 1050 AED with Tabby at the moment."
+      },
+      "overdue": {
+        "button": {
+          "title": "Pay now"
+        },
+        "title": "You have an overdue payment. Once you make your payment, you will be able to shop more with Tabby"
+      },
+      "payFirstPurchase": {
+        "button": {
+          "title": "Pay now"
+        },
+        "callToAction": "Change the payment method",
+        "title": "Pay for your first purchase so you can shop more with Tabby"
+      }
+    }
+  },
+  "scanConfirm": {
+    "back": "Upload again",
+    "description": "Check your name and Emirates ID number",
+    "callToAction": "Buy now",
+    "fields": {
+      "name": {
+        "title": "Full name"
+      },
+      "nationalId": {
+        "title": "Emirates ID"
+      }
+    },
+    "prompt": {
+      "installments": "By clicking \"BUY NOW\", you are agreeing to pay Tabby within {{period}} after placing your order. Failure to pay on time will incur late fees and may affect your credit score.",
+      "payLater": "By clicking \"BUY NOW\", you are agreeing to pay Tabby up to 14 days after receiving your order. Failure to pay on time will incur late fees and may affect your credit score"
+    },
+    "title": "Confirm your data",
+    "uploadTitle": "Please wait while we confirm your details"
+  },
+  "scanError": {
+    "callToAction": "Upload again",
+    "title": "We couldn’t read your data. Please make sure you are uploading the picture of the backside of your Emirates ID and try again"
+  },
+  "terms": "Accept Terms & Conditions",
+  "timer": {
+    "units": "sec."
+  },
+  "welcomeBack": {
+    "back": "Log in with a different account",
+    "callToAction": "Buy now",
+    "installments": {
+      "features": [
+        {
+          "type": "text",
+          "value": "Buy now and pay later in {{terms}} {{period}}"
+        },
+        {
+          "type": "text",
+          "value": "Starting from {{amount}} {{currency}} per month"
+        },
+        { "type": "link", "value": "More info", "name": "moreInfo" }
+      ]
+    },
+    "payLater": {
+      "features": [
+        { "type": "text", "value": "Complete your purchase" },
+        { "type": "text", "value": "Receive your order" },
+        { "type": "text", "value": "Pay us up to 14 days later" },
+        { "type": "link", "value": "More info", "name": "moreInfo" }
+      ]
+    },
+    "title": "Welcome back!"
+  }
+}

@@ -1,0 +1,25 @@
+@import './variables.css';
+
+body {
+  font-family: $font-family-regular;
+  font-size: $font-size-m;
+  line-height: 19px;
+}
+
+:global .notDueYet {
+  position: relative;
+  height: 120px;
+  margin-top: 30px;
+
+  @media (max-width: $min-width) {
+    height: 80px;
+
+    .arrow {
+      display: none;
+    }
+  }
+}
+
+:global .direction-rtl {
+  direction: rtl;
+}

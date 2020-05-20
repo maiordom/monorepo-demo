@@ -1,0 +1,78 @@
+@import '../../assets/variables.css';
+
+.container {
+  height: 100%;
+  border-radius: 10px;
+  border: 2px dashed #979797;
+  position: relative;
+  background: #f5f6f5;
+  cursor: pointer;
+
+  &.isDragOver {
+    border: 2px dashed #3eedbf;
+  }
+
+  &.isLoading {
+    cursor: default;
+
+    .spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+.file {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.formats {
+  width: 80px;
+  height: 35px;
+  background: url(./assets/formats.svg);
+  margin: 20px auto 0;
+}
+
+.cloud {
+  width: 120px;
+  height: 73px;
+  background: url(./assets/cloud.svg);
+}
+
+.browse {
+  color: #3eedbf;
+}
+
+.title {
+  @include typography-l;
+
+  margin-top: 10px;
+}
+
+.subTitle {
+  font-family: $font-family-medium;
+}
+
+.description {
+  @include typography-s;
+
+  color: #959595;
+}
+
+.snippet {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  width: 220px;
+}

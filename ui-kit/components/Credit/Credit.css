@@ -1,0 +1,149 @@
+@import '../../assets//variables.css';
+
+.container {
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+}
+
+.walletBalance {
+  @include typography-l;
+
+  color: #149a7f;
+  margin-top: 10px;
+
+  @media (max-width: $min-width) {
+    @include typography-m;
+  }
+}
+
+.title {
+  @include typography-xl;
+
+  @media (max-width: $min-width) {
+    @include typography-l;
+  }
+}
+
+.defaultState {
+  background: #f5f6f5;
+}
+
+.activeState {
+  background: #abffe9;
+}
+
+.blockedState {
+  background: #f5f6f5;
+
+  .amount,
+  .currency {
+    color: #d7d7d7;
+  }
+}
+
+.overdueState {
+  background: #ff658c;
+}
+
+.pay {
+  @include typography-l;
+
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  margin-left: auto;
+  height: 48px;
+  background: #292929;
+  cursor: pointer;
+  color: #fff;
+
+  &.blocked {
+    background: #d7d7d7;
+    cursor: default;
+  }
+
+  @media (max-width: $min-width) {
+    width: 60px;
+    height: 36px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: auto;
+
+  .debt {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.amountWrapper {
+  position: relative;
+  top: 2px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $min-width) {
+    height: 36px;
+  }
+}
+
+.amount {
+  @include typography-xxl;
+
+  @media (max-width: $min-width) {
+    @include typography-xl;
+  }
+}
+
+.currency {
+  @include typography-m;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 27px;
+  box-sizing: border-box;
+
+  @media (max-width: $min-width) {
+    padding: 10px;
+    border-radius: 17px;
+  }
+}
+
+.toPay {
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.credit {
+  width: 40%;
+  margin-left: 15px;
+
+  @media (max-width: $min-width) {
+    min-width: 100px;
+  }
+}
+
+:global .direction-rtl :local {
+  .info {
+    flex-direction: row-reverse;
+  }
+
+  .credit {
+    margin-left: 0;
+  }
+
+  .toPay {
+    margin-left: 20px;
+  }
+}

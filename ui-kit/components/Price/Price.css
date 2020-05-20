@@ -1,0 +1,35 @@
+@import '../../assets//variables.css';
+
+.currency {
+  color: #717171;
+}
+
+.default {
+  .amount {
+    @include typography-xxl;
+  }
+
+  .currency {
+    @include typography-l;
+  }
+
+  @media (max-width: $min-width) {
+    .amount {
+      @include typography-xl;
+    }
+
+    .currency {
+      @include typography-s;
+    }
+  }
+}
+
+.small {
+  .amount {
+    @include typography-xl;
+  }
+
+  .currency {
+    @include typography-s;
+  }
+}

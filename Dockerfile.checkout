@@ -1,0 +1,24 @@
+FROM node:latest AS builder
+
+ARG TAG=develop
+
+WORKDIR /app
+COPY . .
+
+RUN make setup
+RUN make build-checkout
+RUN make build-integration
+
+
+FROM nginx
+
+EXPOSE 80
+
+COPY --from=builder --chown=nginx:nginx /app/checkout/dist/integration /app
+COPY --from=builder --chown=nginx:nginx /app/checkout/dist/checkout /app/checkout
+
+COPY --chown=nginx:nginx .nginx/entrypoint.sh /app/entrypoint.sh
+COPY --chown=nginx:nginx .nginx/checkout.conf /etc/nginx/conf.d/default.conf
+
+ENTRYPOINT [ "/app/entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]

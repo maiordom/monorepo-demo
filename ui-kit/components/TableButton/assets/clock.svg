@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="712" height="1100"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.2.-main-page.-several-orders---still-to-pay.-available-limit.-copy-4" transform="translate(-615.000000, -1857.000000)">
+            <g id="Group-23-Copy" transform="translate(548.000000, 874.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#F5F6F5" xlink:href="#path-1"></use>
+            </g>
+            <g id="Group-23" transform="translate(614.000000, 1127.000000)">
+                <g id="Group-6" transform="translate(1.000000, 730.000000)">
+                    <g id="Group-7">
+                        <circle id="Oval" fill-opacity="0.2" fill="#292929" cx="14" cy="14" r="14"></circle>
+                        <circle id="Oval" fill="#FFFFFF" cx="14" cy="14" r="7"></circle>
+                        <path d="M13,11 C13.5522847,11 14,11.4477153 14,12 L14,16 L16,16 C16.5522847,16 17,16.4477153 17,17 C17,17.5522847 16.5522847,18 16,18 L13,18 L13,18 C12.4477153,18 12,17.5522847 12,17 L12,12 C12,11.4477153 12.4477153,11 13,11 Z" id="Combined-Shape" fill-opacity="0.2" fill="#292929"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

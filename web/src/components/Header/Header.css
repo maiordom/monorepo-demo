@@ -1,0 +1,73 @@
+@import '../../assets/variables.css';
+
+.title {
+  @include typography-xxxxl;
+}
+
+.burger {
+  margin-right: 20px;
+}
+
+.logo,
+.burger {
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+@media (min-width: $middle-width) {
+  .logo,
+  .burger {
+    display: none;
+  }
+}
+
+@media (max-width: calc($min-width - 1px)) {
+  .title {
+    @include typography-xxl;
+
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: $min-width) and (max-width: calc($middle-width - 1px)) {
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.logo {
+  width: 81px;
+  height: 27px;
+  background: url(../../assets/images/logo.png);
+  background-size: cover;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+:global .direction-rtl :local {
+  .burger {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $min-width) and (max-width: calc($middle-width - 1px)) {
+  :global .direction-rtl :local {
+    .logo {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../assets/variables.css';
+
+.title {
+  @include typography-l;
+
+  color: rgba(#292929, 0.7);
+}
+
+.price {
+  margin-left: auto;
+}
+
+.quantity {
+  color: rgba(#000, 0.5);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 54px;
+  border-bottom: 1px solid #eaeaea;
+  align-items: center;
+}
+
+.image {
+  width: 35px;
+  height: 35px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  border-radius: 7px;
+
+  &.empty {
+    background: url(../../assets/images/empty.png) no-repeat center;
+    background-size: cover;
+  }
+}
+
+:global .direction-rtl :local {
+  .image {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  .price {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .quantity {
+    margin-left: 10px;
+  }
+}

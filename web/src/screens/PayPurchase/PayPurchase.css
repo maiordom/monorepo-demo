@@ -1,0 +1,46 @@
+@import '../../assets/variables.css';
+
+.spinner {
+  margin: 100px auto 0;
+}
+
+.wrong {
+  @include typography-xl;
+
+  text-align: center;
+  padding-top: 100px;
+}
+
+.inner {
+  border-top: 3px dashed #d8d8d8;
+  border-bottom: 3px dashed #d8d8d8;
+  background: #fbfbfb;
+  padding: 20px 25px;
+  margin-top: 15px;
+
+  @media (max-width: $min-width) {
+    margin: 15px -25px 0;
+  }
+}
+
+.order {
+  max-width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pay {
+  margin: 30px auto auto;
+  width: 250px;
+}
+
+.installments {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.installmentItem {
+  margin: 8px;
+}

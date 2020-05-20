@@ -1,0 +1,20 @@
+@import '../../assets/variables.css';
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.close {
+  width: 24px;
+  height: 24px;
+  background: url(./assets/close.svg) center center no-repeat;
+  margin: 20px 15px 0 auto;
+  cursor: pointer;
+}
+
+:global .direction-rtl :local {
+  .close {
+    margin: 20px auto 0 15px;
+  }
+}

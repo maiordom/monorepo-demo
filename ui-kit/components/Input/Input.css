@@ -1,0 +1,125 @@
+@import '../../assets/variables.css';
+
+.wrapper {
+  position: relative;
+}
+
+.title {
+  @include typography-s;
+
+  color: #939393;
+  margin-bottom: 4px;
+}
+
+.container {
+  height: 48px;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  background: white;
+  transition: border-color 0.1s, background 0.1s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &:hover {
+    border: 1px solid #868686;
+    background: rgba(#fff, 0.5);
+  }
+
+  &.focused {
+    border-color: #3eedbf;
+    background: white;
+  }
+
+  &.error {
+    border: 1px solid #ff4a4a;
+  }
+
+  &.accepted {
+    border-color: #3eedbf;
+    background: #cafff2;
+    pointer-events: none;
+  }
+}
+
+.container.white {
+  background: none;
+  border: 1px solid #fff;
+
+  .input {
+    color: #fff;
+    caret-color: #fff;
+
+    &::placeholder {
+      color: rgba(#fff, 0.5);
+    }
+  }
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -21px;
+  color: #ff4a4a;
+  font-size: $font-size-s;
+  line-height: 17px;
+}
+
+.icon {
+  width: 19px;
+  height: 19px;
+  margin: 0 15px;
+  flex-shrink: 0;
+}
+
+.deleteIcon {
+  background: url('./assets/delete.svg');
+  cursor: pointer;
+}
+
+.acceptedIcon {
+  background: url('./assets/accepted.svg');
+}
+
+.input {
+  padding: 0;
+  background: none;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: none;
+  line-height: 19px;
+  font-size: $font-size-m;
+  font-family: $font-family-regular;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: #868686;
+    font-size: $font-size-m;
+    font-family: $font-family-regular;
+
+    /* safari */
+    line-height: 23px;
+  }
+
+  &::-moz-placeholder {
+    line-height: 46px;
+  }
+}
+
+:global .direction-ltr :local {
+  .input {
+    padding-left: 12px;
+  }
+}
+
+:global .direction-rtl :local {
+  .input {
+    padding-right: 12px;
+  }
+}

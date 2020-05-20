@@ -1,0 +1,112 @@
+@import '../../assets/variables.css';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  position: relative;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+
+  &.empty {
+    background: url(../../assets/images/empty.png) no-repeat center;
+    background-size: cover;
+  }
+}
+
+.name {
+  @include typography-xl;
+}
+
+@media (max-width: $min-width) {
+  .logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .name {
+    @include typography-l;
+  }
+}
+
+.center {
+  align-items: center;
+}
+
+.paymentStatus {
+  @include typography-m;
+}
+
+.paid {
+  @include typography-s;
+
+  color: #6d6d6d;
+}
+
+.paymentOverdue {
+  color: #d3617e;
+}
+
+.refunded {
+  color: #5a3eed;
+}
+
+.space {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  top: 2px;
+}
+
+.price,
+.pay {
+  margin-left: auto;
+}
+
+.payButton {
+  border-radius: 24px;
+  background: #292929;
+  color: white;
+  font-size: $font-size-l;
+  padding: 0 24px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &.disabled {
+    background: #d7d7d7;
+    cursor: default;
+  }
+}
+
+.payButtonText {
+  position: relative;
+  top: 2px;
+}
+
+.info {
+  padding: 35px 0 10px 0;
+}
+
+:global .direction-rtl :local {
+  .space {
+    margin-right: 15px;
+    margin-left: 0;
+  }
+
+  .price,
+  .pay {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

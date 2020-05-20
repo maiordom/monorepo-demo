@@ -1,0 +1,74 @@
+@import '../../assets/variables.css';
+
+.container {
+  max-width: 600px;
+}
+
+.creditStatus {
+  margin-top: 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title {
+  @include typography-xxxl;
+}
+
+.timeline {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.avatar {
+  width: 74px;
+  height: 74px;
+  background: url(../../assets/images/avatar.png) no-repeat center;
+  background-size: cover;
+  margin-left: auto;
+  flex-shrink: 0;
+
+  @media (max-width: $min-width) {
+    width: 57px;
+    height: 57px;
+  }
+}
+
+.logout {
+  width: 160px;
+  margin-top: 30px;
+}
+
+.callToAction {
+  @include typography-m;
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.info {
+  margin: 40px -20px 0;
+  padding: 0 20px;
+}
+
+.pay {
+  margin-left: 15px;
+}
+
+:global .direction-rtl :local {
+  .avatar {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .title {
+    margin-left: 15px;
+  }
+}

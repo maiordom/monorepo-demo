@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tabby Checkout</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      #tabby-checkout {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script
+      type="text/javascript"
+      src="integration.js?<%= htmlWebpackPlugin.options.__TAG__ %>"
+    ></script>
+    <div id="tabby-checkout"></div>
+    <script>
+      (() => {
+        var search = location.search || '';
+        var params = {};
+
+        if (search[0] === '?') {
+          search = search.slice(1);
+        }
+
+        paramsArray = search.split('&');
+
+        paramsArray.map(function(item) {
+          var pair = item.split('=');
+
+          params[pair[0]] = pair[1];
+        });
+
+        var config = {
+          nodeId: 'tabby-checkout',
+          direction: 'ltr',
+          lightboxLayout: false,
+          sessionId: params.sessionId,
+          apiKey: params.apiKey,
+          onChange: data => {
+            if (data.status === 'created') {
+              Tabby.launch();
+            }
+          },
+          onClose: () => {
+            document.body.removeChild(
+              document.querySelector('#tabby-checkout')
+            );
+          },
+        };
+
+        Tabby.init(Object.assign(config, window.SDK && window.SDK.config));
+        Tabby.create();
+      })();
+    </script>
+  </body>
+</html>

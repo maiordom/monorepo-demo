@@ -1,0 +1,40 @@
+@import '../../assets//variables.css';
+
+.container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.progress {
+  margin: 0 20px;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.title {
+  @include typography-xl;
+
+  margin-top: 40px;
+}
+
+.description {
+  margin-top: 10px;
+  color: #292929;
+}
+
+.plans {
+  margin-top: 35px;
+}
+
+.plan + .plan {
+  margin-top: 20px;
+}
+
+.callToAction {
+  margin-top: 30px;
+}

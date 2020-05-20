@@ -1,0 +1,23 @@
+@import '../../assets/variables.css';
+
+.items {
+  margin-left: 40px;
+}
+
+.item {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #d8d8d8;
+
+  .name {
+    @include typography-m;
+
+    color: #818181;
+  }
+
+  .value {
+    @include typography-xl;
+  }
+}

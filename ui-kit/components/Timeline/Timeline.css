@@ -1,0 +1,155 @@
+:global {
+  .Timeline {
+    width: 43px;
+    height: 43px;
+
+    .flow-layer {
+      position: absolute;
+      overflow: visible;
+      box-sizing: border-box;
+      border-width: 0px;
+    }
+
+    .flow-border {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      box-sizing: border-box;
+      border-style: solid;
+      border-width: 0px;
+    }
+
+    &.flow-artboard {
+      width: 43px;
+      height: 43px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    & .viewbox {
+      width: 43px;
+      height: 43px;
+      left: 21.5px;
+      top: 21.5px;
+      transform: translate(-50%, -50%) rotate(0deg);
+      background-color: #00000000;
+      overflow: visible;
+    }
+
+    & .fill_1 {
+      width: 14.41px;
+      height: 12.47px;
+      left: 24.04px;
+      top: 7.51px;
+      transform: translate(-0%, -0%) rotate(0deg);
+      transform-origin: 0% 0%;
+      background-color: #00000000;
+      overflow: visible;
+    }
+
+    & .fill_1-svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #a25ef3;
+    }
+
+    & .fill_3 {
+      width: 14.4px;
+      height: 14.05px;
+      left: 14.02px;
+      top: 24.86px;
+      transform: translate(-0%, -0%) rotate(0deg);
+      transform-origin: 0% 0%;
+      background-color: #00000000;
+      overflow: visible;
+    }
+
+    & .fill_3-svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #3eedbf;
+    }
+
+    & .fill_5 {
+      width: 14.41px;
+      height: 12.47px;
+      left: 24.04px;
+      top: 23.23px;
+      transform: translate(-0%, -0%) rotate(0deg);
+      transform-origin: 0% 0%;
+      background-color: #00000000;
+      overflow: visible;
+    }
+
+    & .fill_5-svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #3eedbf;
+    }
+
+    & .fill_7 {
+      width: 14.4px;
+      height: 14.05px;
+      left: 14.02px;
+      top: 4.3px;
+      transform: translate(-0%, -0%) rotate(0deg);
+      transform-origin: 0% 0%;
+      background-color: #00000000;
+      overflow: visible;
+    }
+
+    & .fill_7-svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #3eedbf;
+    }
+
+    & .fill_10 {
+      width: 14.41px;
+      height: 12.47px;
+      left: 4px;
+      top: 23.23px;
+      transform: translate(-0%, -0%) rotate(0deg);
+      transform-origin: 0% 0%;
+      background-color: #00000000;
+      overflow: visible;
+    }
+
+    & .fill_10-svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #3eedbf;
+    }
+
+    & .fill_13 {
+      width: 14.41px;
+      height: 12.47px;
+      left: 4px;
+      top: 7.51px;
+      transform: translate(-0%, -0%) rotate(0deg);
+      transform-origin: 0% 0%;
+      background-color: #00000000;
+      overflow: visible;
+    }
+
+    & .fill_13-svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #3eedbf;
+    }
+
+    path {
+      fill-rule: evenodd;
+    }
+
+    svg {
+      overflow: visible;
+    }
+  }
+}

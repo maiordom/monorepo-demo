@@ -1,0 +1,85 @@
+@import '../../assets/variables.css';
+
+.container {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover:not(.toggled) {
+    background: #f5f6f5;
+
+    .inner:after {
+      display: none;
+    }
+  }
+}
+
+.inner {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid #d8d8d8;
+  }
+}
+
+.personal {
+  width: 22px;
+  height: 28px;
+  background: url(./assets/personal.svg);
+}
+
+.clock {
+  width: 28px;
+  height: 28px;
+  background: url(./assets/clock.svg);
+}
+
+.title {
+  @include typography-xl;
+}
+
+.close {
+  width: 25px;
+  height: 25px;
+  background: url(./assets/toggler-close.svg) no-repeat center center;
+  margin-left: auto;
+}
+
+.arrow {
+  width: 25px;
+  height: 25px;
+  background: url(./assets/toggler-arrow.svg) no-repeat center center;
+  margin-left: auto;
+}
+
+:global .direction-rtl :local {
+  .arrow {
+    margin-right: auto;
+    margin-left: 0;
+    transform: rotate(180deg);
+  }
+
+  .inner {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .close {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

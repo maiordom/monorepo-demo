@@ -1,0 +1,34 @@
+@import '../../assets/variables.css';
+
+.container {
+  @include typography-l;
+
+  min-height: 39px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  @media (max-width: $min-width) {
+    @include typography-m;
+  }
+}
+
+.name {
+  color: rgba(#292929, 0.7);
+}
+
+.value {
+  max-width: 250px;
+  margin-left: 10px;
+}
+
+:global .direction-rtl :local {
+  .value {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}

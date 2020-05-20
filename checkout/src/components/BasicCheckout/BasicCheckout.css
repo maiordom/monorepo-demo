@@ -1,0 +1,29 @@
+@import '../../assets/variables.css';
+
+.field {
+  width: 335px;
+
+  @media (max-width: $min-width) {
+    width: 100%;
+  }
+}
+
+.logo {
+  margin: 30px auto 0;
+}
+
+.fieldWrapper {
+  margin-top: 15px;
+
+  & + & {
+    margin-top: 45px;
+  }
+}
+
+.terms {
+  margin-top: 40px;
+}
+
+.submit {
+  margin-top: 20px;
+}

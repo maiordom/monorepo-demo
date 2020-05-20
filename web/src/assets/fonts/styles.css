@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'noto_sans_display_medium';
+  src: url('notosansdisplay-medium-webfont.woff2') format('woff2'),
+    url('notosansdisplay-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noto_sans_display_regular';
+  src: url('notosansdisplay-regular-webfont.woff2') format('woff2'),
+    url('notosansdisplay-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

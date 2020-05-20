@@ -1,0 +1,58 @@
+@import '../../assets/variables.css';
+
+.container {
+  height: 84px;
+  background: rgba($main-color, 0.27);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: $min-width) {
+  .inner {
+    flex: 1;
+  }
+}
+
+.title {
+  @include typography-l;
+
+  font-family: $font-family-medium;
+}
+
+.description {
+  margin-top: 5px;
+}
+
+.close {
+  width: 24px;
+  height: 24px;
+  background: url(./assets/close.svg) center center no-repeat;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  @media (max-width: $min-width) {
+    top: 20px;
+    right: 15px;
+  }
+}
+
+:global .direction-rtl :local {
+  .close {
+    right: auto;
+    left: 10px;
+
+    @media (max-width: $min-width) {
+      top: 20px;
+      left: 15px;
+    }
+  }
+}
